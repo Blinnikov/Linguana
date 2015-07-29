@@ -15,9 +15,10 @@ namespace Linguana.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            var appName = "Linguana";
+            var message = $"'{appName}' description page.";
 
-            return View();
+            return View("About", message);
         }
 
         public IActionResult Contact()
